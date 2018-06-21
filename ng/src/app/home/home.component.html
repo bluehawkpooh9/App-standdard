@@ -1,0 +1,91 @@
+<!-- 
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand"><a [routerLink]="['/home']">Standard</a></a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li ><a [routerLink]="['/home']">home</a></li>
+      <li><a [routerLink]="['/i18n']">i18n</a></li>
+      <li><a [routerLink]="['/AutoComponent']">auto</a></li>
+     
+      <li><a [routerLink]="['/InputFileComponent']">InputFile</a></li>
+      <li><a [routerLink]="['/AtComponent']">Autocompplete</a></li>
+      <li dropdown>
+        <a dropdownToggle class="dropdown-toggle" role="button">Form <span class="caret"></span></a>
+        <ul *dropdownMenu class="dropdown-menu">
+            <li><a [routerLink]="['/HeroFormComponent']">Template-driven Forms</a></li>
+            <li><a [routerLink]="['/HeroListComponent']">Form Validation</a></li>
+          
+             <li><a [routerLink]="['/EventsComponent']">event</a></li>
+        </ul>
+    </li>  
+      <li><a [routerLink]="['/PagingComponent']">paging</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+         <li> <a  (click)="switchLanguage('en')"><img src="assets/img/TH.png" alt="Avatar" style="width: 30px;" ></a><li>
+          <li> <a (click)="switchLanguage('th')"><img src="assets/img/๊US.png" alt="Avatar" style="width: 30px;" ></a><li>
+        <li><a [routerLink]="['/UserinfoComponent']"><i class="fa fa-user-circle-o" aria-hidden="true"> Userinfo</i></a></li>
+      <li><a [routerLink]="['/login']"><i class="fa fa-sign-out" aria-hidden="true"> Logout</i></a></li>
+    </ul>
+  </div>
+
+</nav> -->
+
+<app-i18n></app-i18n>
+    <body class = "colorhome"> 
+<div class="contrainer">
+
+
+<div class="col-sm-5 ">
+  <br/>  
+  <h1>{{'home'| translate}}</h1>
+
+    <!-- <div>
+        Users from secure api end point:
+          <br/>  {{users.email}}
+          <br/>   {{users.name}}
+          <br/>      {{users.tokens}}
+          <br/> {{users.rules.dept}}
+          <br/> {{users.rules.position}}
+    </div> -->
+    
+
+                    
+            <table class="table "  >
+              <thead bgcolor="#5eb1ff" >
+                <tr>
+                  <th>{{'name'|translate}}</th>
+                  <th>{{'nickname'|translate}}</th>
+                  <th>{{'age'|translate}}</th>
+                </tr>
+              </thead>
+              <tbody bgcolor="#84b3ff" >
+                <tr *ngFor="let test of test">
+                  <td>{{test.name}}</td>
+                  <td>{{test.nickname}}</td>
+                  <td>{{test.age}}</td>
+             
+                  
+                </tr>
+               <tr>
+                 <td></td>
+                 <td></td>
+                <td>sum = {{sum}}</td>
+               </tr>
+              </tbody>
+            </table>
+      
+           
+                
+                                    
+</div>
+
+<app-http></app-http>
+
+</div>
+
+
+<!-- <app-load></app-load> -->
+
+</body>

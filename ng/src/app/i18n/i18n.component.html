@@ -1,0 +1,50 @@
+
+<nav class="navbar navbar-default" >
+        <div class="container-fluid">
+          <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" (click)="isCollapsed = !isCollapsed" aria-expanded="false">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+            <a class="navbar-brand"><a [routerLink]="['/home']">Standard</a></a>
+          </div>
+          <div class="collapse navbar-collapse" [collapse]=isCollapsed>
+              <ul class="nav navbar-nav">
+                
+            
+            <li ><a [routerLink]="['/home']">home</a></li>
+           
+            <li><a [routerLink]="['/AutoComponent']">Auto complete</a></li>
+            <li dropdown>
+                    <a dropdownToggle class="dropdown-toggle" role="button">Upload file <span class="caret"></span></a>
+                    <ul *dropdownMenu class="dropdown-menu">
+                        <li><a [routerLink]="['/AtComponent']">Upload file1</a></li>
+                      
+                       
+                    </ul>
+                </li>  
+                
+            <li dropdown>
+              <a dropdownToggle class="dropdown-toggle" role="button">Form <span class="caret"></span></a>
+              <ul *dropdownMenu class="dropdown-menu">
+                  <li><a [routerLink]="['/HeroFormComponent']">Template-driven Forms and event</a></li>
+                  <li><a [routerLink]="['/HeroListComponent']">Form Validation</a></li>
+                
+                 
+              </ul>
+          </li>  
+            <li><a [routerLink]="['/PagingComponent']">paging</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+               <li> <a  (click)="switchLanguage('th')"><img src="assets/img/TH.png" alt="Avatar" style="width: 30px;" ></a><li>
+                <li> <a (click)="switchLanguage('en')"><img src="assets/img/US.png" alt="Avatar" style="width: 30px;" ></a><li>
+              <li><a [routerLink]="['/UserinfoComponent']"><i class="fa fa-user-circle-o" aria-hidden="true"> Userinfo</i></a></li>
+            <li><a [routerLink]="['/login']"><i class="fa fa-sign-out" aria-hidden="true"> Logout</i></a></li>
+          </ul>
+          </div>
+        </div>
+      
+      </nav>
+   

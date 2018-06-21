@@ -1,0 +1,11 @@
+<app-i18n></app-i18n>
+<body class = "colorhome"> 
+<div>
+<br/>
+  <ng-autocomplete (selected)="Selected($event)"
+                   (no-result)="NoResult($event)"
+                   [classes]="['']"
+                   [group]="groupStress1" [key]="'item1'"></ng-autocomplete>
+  <div style="clear: both;"></div>
+</div>
+</body>

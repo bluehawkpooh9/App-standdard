@@ -1,0 +1,21 @@
+<app-i18n></app-i18n>
+<body class = "colorhome"> 
+<div class="contrainer">
+  <div class="col-sm-7">
+  <h3 *ngIf="isLoading"><i>{{'Loading employee ...'| translate}} </i></h3>
+  <h3 *ngIf="!isLoading">{{'Select a employee:'| translate}}</h3>
+  
+  <nav>
+    <button (click)="getHeroes()" class="btn btn-primary">{{'Refresh'| translate}}</button><br>
+    <a *ngFor="let hero of heroes | async" (click)="select(hero)">{{hero.name }}<br></a>
+  </nav>
+  
+  <div *ngIf="selectedHero">
+    <hr>
+    <h2>{{'employee detail'| translate}}</h2>
+    <h3>{{'Editing'| translate}} {{selectedHero.name}}</h3>
+    <app-hero-detail [hero]="selectedHero"></app-hero-detail>
+  </div>
+</div>
+</div>
+</body>

@@ -1,0 +1,23 @@
+<div class="container-fluid">
+    <div class="row sm-5">
+        <div class="col-6 m-auto">
+            <input-file 
+                inputId="images" 
+                inputMaxFiles="4" 
+                [(model)]="inputFileModel"
+                (acceptedFile)="onAccept($event)"
+                (removedFile)="onRemove($event)">
+            </input-file> 
+        </div>
+    </div>
+    <div class="row sm-5">
+        <div class="col-6 m-auto">
+            <input-file 
+                inputId="images-minimal" 
+                minimal="true"
+                [(model)]="inputFileMinimalModel"
+                (acceptedFile)="onAccept($event)">
+            </input-file> 
+        </div>
+    </div>
+</div>

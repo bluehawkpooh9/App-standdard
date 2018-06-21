@@ -1,0 +1,24 @@
+<!-- <app-i18n></app-i18n> -->
+<h1>{{'Form user input'|translate}}</h1>
+      
+          <br/>
+          <p>on keyup</p>
+          <input (keyup)="onKey($event)"/>
+            
+          <p>{{values}}</p>
+            <br/>
+            <p>on keyup</p>
+            <input #box (keyup)="0">
+              <p>{{box.value}}</p>
+              <br/>
+              <p>keyup on enter</p>
+              <input #box1 (keyup.enter)="onEnter(box1.value)">
+              <p>{{value}}</p>
+              <br/>
+              <input #newList
+              (keyup.enter)="addList(newList.value)"
+              (blur)="addList(newList.value); newList.value='' ">
+
+              <button (click)="addList(newList.value)" class="btn btn-success">Add</button>
+
+               <ul><li *ngFor="let list of lists">{{list}}</li></ul>
